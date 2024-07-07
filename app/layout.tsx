@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-cool-grey-100">
+    <html lang="en" className="scroll-smooth bg-cool-grey-100">
       <body
         className={`${inter.className} ${raleway.variable} ${inter.variable} ${source_serif.variable}`}
       >

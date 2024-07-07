@@ -19,23 +19,41 @@ const linkStyle =
 
 export default function Home() {
   return (
-    <main className="mx-4 my-24 space-y-24">
-      <Hero />
-      <MachineShopInterface />
-      <MachineShopInterface />
-      <MachineShopInterface />
-      <MachineShopInterface />
-      <MachineShopInterface />
-      <MachineShopInterface />
-    </main>
+    <>
+      <Navbar />
+      <main id="home" className="mx-4 my-40">
+        <Hero />
+        <section id="projects" className="space-y-24 pt-24">
+          <MachineShopInterface />
+          <MachineShopInterface />
+          <MachineShopInterface />
+          <MachineShopInterface />
+          <MachineShopInterface />
+          <MachineShopInterface />
+        </section>
+      </main>
+    </>
+  );
+}
+
+function Navbar() {
+  return (
+    <div className="fixed left-0 top-0 z-50 h-16 w-screen bg-cool-grey-50 shadow-md backdrop-blur-md">
+      <div className="mx-auto mt-5 flex h-fit max-w-[960px] flex-row justify-evenly align-middle font-raleway text-xl font-semibold text-cool-grey-800">
+        <a href="#">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   );
 }
 
 function Hero() {
   return (
     <motion.section
-      initial={{ y: -50, opacity: 0, scale: 0.8 }}
-      whileInView={{ y: 0, opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ ease: "easeOut" }}
       className="mx-auto grid max-w-[960px] grid-cols-3 gap-9"
