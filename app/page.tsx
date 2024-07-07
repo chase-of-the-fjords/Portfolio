@@ -8,7 +8,7 @@ import "react-photo-view/dist/react-photo-view.css";
 import { motion } from "framer-motion";
 
 const textBlockStyle =
-  "flex flex-grow flex-col justify-center space-y-4 overflow-hidden rounded-md bg-gradient-to-br bg-fixed p-5 font-raleway text-xl leading-8 shadow-inner-xl";
+  "flex flex-grow flex-col justify-center space-y-2 lg:space-y-4 overflow-hidden rounded-md bg-gradient-to-br bg-fixed p-5 font-raleway text-lg lg:text-xl leading-6 lg:leading-8 shadow-inner-xl";
 
 const headingStyle = "font-source-serif text-3xl font-medium tracking-tight";
 
@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main id="home" className="mx-4 my-40">
+      <main id="home" className="mx-4 my-32 md:my-40">
         <Hero />
         <section id="projects" className="mt-4 space-y-24 pt-20">
           <MachineShopInterface />
@@ -90,20 +90,20 @@ function Hero() {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ ease: "easeOut" }}
-      className="mx-auto grid max-w-[960px] grid-cols-3 gap-9"
+      className="mx-auto grid max-w-[960px] grid-cols-1 text-center md:grid-cols-4 md:gap-9 md:text-left lg:grid-cols-3"
     >
       {/* Picture of Chase */}
-      <div>
+      <div className="mx-auto w-fit">
         <Image
           src="/images/fjordpic.jpg"
           alt="Picture of Chase Peterson"
           width={1000}
           height={1000}
-          className={`${imageStyle} rounded-full hover:translate-y-0 hover:cursor-default`}
+          className={`${imageStyle} mb-3 w-36 !rounded-full hover:translate-y-0 hover:cursor-default md:w-auto`}
         />
       </div>
       {/* Name & Text */}
-      <div className="col-span-2 flex flex-col gap-4">
+      <div className="col-span-3 flex flex-col gap-4 lg:col-span-2">
         <h1 className={headingStyle}>Chase Peterson Portfolio</h1>
         <div className={`${textBlockStyle} bg-blue-300`}>
           <p>
