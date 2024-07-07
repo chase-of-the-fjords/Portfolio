@@ -29,11 +29,6 @@ export default function Home() {
         <Hero />
         <section id="projects" className="mt-4 space-y-24 pt-20">
           <MachineShopInterface />
-          <MachineShopInterface />
-          <MachineShopInterface />
-          <MachineShopInterface />
-          <MachineShopInterface />
-          <MachineShopInterface />
         </section>
       </main>
     </>
