@@ -63,7 +63,7 @@ function Navbar() {
 
   return (
     <div
-      className={`fixed left-0 top-0 z-50 h-16 w-screen bg-cool-grey-50 shadow-md backdrop-blur-md transition-[top] ${show ? "top-0" : "-top-20"}`}
+      className={`fixed left-0 z-50 h-16 w-screen bg-cool-grey-50 shadow-md backdrop-blur-md transition-[top] ${show ? "top-0" : "-top-20"}`}
     >
       <div className="mx-auto mt-5 flex h-fit max-w-[960px] flex-row justify-evenly align-middle font-raleway text-xl font-semibold">
         <a href="#" className={navbarLinkStyle}>
