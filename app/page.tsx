@@ -189,7 +189,7 @@ function MachineShopInterface() {
         </h1>
         {/* Grid */}
         <div className="grid grid-cols-3 gap-3 sm:grid-cols-5 md:grid-cols-3 md:gap-9">
-          <div className="col-span-3 flex flex-col gap-2 sm:col-span-5 md:col-span-2 md:row-span-2 md:aspect-square md:gap-4">
+          <div className="col-span-3 col-start-1 flex flex-col gap-2 sm:col-span-5 md:col-span-2 md:col-start-1 md:row-span-2 md:aspect-square md:gap-4">
             <div className={`${textBlockStyle} bg-yellow-300`}>
               <p>
                 At <b>Origin Golf</b>, I developed an interface to{" "}
@@ -239,7 +239,6 @@ function MachineShopInterface() {
             </div>
           </div>
           {/* Pictures */}
-          {/* <div className="col-span-1 space-y-9"></div> */}
           <PhotoView src="/images/machineshop/shop.png">
             <Image
               src="/images/machineshop/shop.png"
