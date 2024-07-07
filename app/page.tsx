@@ -7,10 +7,20 @@ import "react-photo-view/dist/react-photo-view.css";
 
 import { motion } from "framer-motion";
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 const textBlockStyle =
   "flex flex-grow flex-col justify-center space-y-2 lg:space-y-4 overflow-hidden rounded-md bg-gradient-to-br bg-fixed p-5 font-raleway text-lg lg:text-xl leading-6 lg:leading-8 shadow-inner-xl";
 
-const headingStyle = "font-source-serif text-3xl font-medium tracking-tight";
+const headingStyle =
+  "font-source-serif text-2xl sm:text-3xl font-medium tracking-tight";
 
 const imageStyle =
   "aspect-square h-fit overflow-hidden rounded-md bg-blue-300 shadow-xl hover:cursor-pointer hover:-translate-y-1 transition-transform size-fit object-cover";
@@ -65,7 +75,7 @@ function Navbar() {
     <div
       className={`fixed left-0 z-50 h-16 w-screen bg-cool-grey-50 shadow-md backdrop-blur-md transition-[top] ${show ? "top-0" : "-top-20"}`}
     >
-      <div className="mx-auto mt-5 flex h-fit max-w-[960px] flex-row justify-evenly align-middle font-raleway text-xl font-semibold">
+      <div className="mx-auto mt-5 hidden h-fit max-w-[960px] flex-row justify-evenly align-middle font-raleway text-xl font-semibold min-[450px]:flex">
         <a href="#" className={navbarLinkStyle}>
           Home
         </a>
@@ -78,6 +88,39 @@ function Navbar() {
         <a href="#contact" className={navbarLinkStyle}>
           Contact
         </a>
+      </div>
+      <div className="min-[450px]:hidden">
+        <a
+          href="#"
+          className="absolute left-4 top-5 font-raleway text-xl font-semibold text-cool-grey-900"
+        >
+          Chase Peterson
+        </a>
+        <div className="absolute right-4 top-5 font-raleway">
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <span className="text-lg font-medium text-cool-grey-600 hover:text-cool-grey-900">
+                Menu
+              </span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="text-left font-raleway">
+              <DropdownMenuLabel>Navigation</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <a href="#">Home</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="#projects">Projects</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="#experience">Experience</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="#contact">Contact</a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
     </div>
   );
@@ -145,8 +188,8 @@ function MachineShopInterface() {
           Origin Golf
         </h1>
         {/* Grid */}
-        <div className="grid grid-cols-3 gap-9">
-          <div className="col-span-2 flex flex-col gap-4">
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-5 md:grid-cols-3 md:gap-9">
+          <div className="col-span-3 flex flex-col gap-2 sm:col-span-5 md:col-span-2 md:row-span-2 md:aspect-square md:gap-4">
             <div className={`${textBlockStyle} bg-yellow-300`}>
               <p>
                 At <b>Origin Golf</b>, I developed an interface to{" "}
@@ -196,26 +239,25 @@ function MachineShopInterface() {
             </div>
           </div>
           {/* Pictures */}
-          <div className="flex-1 space-y-9">
-            <PhotoView src="/images/machineshop/shop.png">
-              <Image
-                src="/images/machineshop/shop.png"
-                alt="Picture of Chase Peterson"
-                width={1000}
-                height={1000}
-                className={imageStyle}
-              />
-            </PhotoView>
-            <PhotoView src="/images/machineshop/saw.png">
-              <Image
-                src="/images/machineshop/saw.png"
-                alt="Picture of Chase Peterson"
-                width={1000}
-                height={1000}
-                className={imageStyle}
-              />
-            </PhotoView>
-          </div>
+          {/* <div className="col-span-1 space-y-9"></div> */}
+          <PhotoView src="/images/machineshop/shop.png">
+            <Image
+              src="/images/machineshop/shop.png"
+              alt="Picture of Chase Peterson"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/machineshop/saw.png">
+            <Image
+              src="/images/machineshop/saw.png"
+              alt="Picture of Chase Peterson"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1`}
+            />
+          </PhotoView>
           <PhotoView src="/images/machineshop/moment.png">
             <Image
               src="/images/machineshop/moment.png"
@@ -231,7 +273,7 @@ function MachineShopInterface() {
               alt="Picture of Chase Peterson"
               width={1000}
               height={1000}
-              className={imageStyle}
+              className={`${imageStyle} col-span-1 row-span-1`}
             />
           </PhotoView>
           <PhotoView src="/images/machineshop/historyfilter.png">
@@ -240,7 +282,7 @@ function MachineShopInterface() {
               alt="Picture of Chase Peterson"
               width={1000}
               height={1000}
-              className={imageStyle}
+              className={`${imageStyle} col-span-1 row-span-1`}
             />
           </PhotoView>
         </div>
