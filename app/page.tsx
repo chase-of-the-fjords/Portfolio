@@ -27,7 +27,7 @@ export default function Home() {
       <Navbar />
       <main id="home" className="mx-4 my-40">
         <Hero />
-        <section id="projects" className="space-y-24 pt-24">
+        <section id="projects" className="mt-4 space-y-24 pt-20">
           <MachineShopInterface />
           <MachineShopInterface />
           <MachineShopInterface />
