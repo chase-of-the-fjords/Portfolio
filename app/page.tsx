@@ -125,8 +125,10 @@ function MachineShopInterface() {
                   target="_blank"
                 >
                   moment history
-                </a>{" "}
-                page that shows the shop's exact state at any point in the past.
+                </a>
+                {
+                  " page that shows the shop's exact state at any point in the past."
+                }
               </p>
               <p>
                 All pages are also built with <b>responsive design</b>, and look
