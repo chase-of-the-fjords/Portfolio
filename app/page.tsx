@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -16,6 +17,9 @@ const imageStyle =
 
 const linkStyle =
   "font-bold transition-colors text-blue-900 hover:text-purple-900";
+
+const navbarLinkStyle =
+  "text-cool-grey-700 hover:text-cool-grey-900 transition-colors";
 
 export default function Home() {
   return (
@@ -37,13 +41,48 @@ export default function Home() {
 }
 
 function Navbar() {
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 150) {
+      // if scroll down hide the navbar
+      setShow(false);
+    } else {
+      // if scroll up show the navbar
+      setShow(true);
+    }
+
+    // remember current page location to use in the next move
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+
+    // cleanup function
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div className="fixed left-0 top-0 z-50 h-16 w-screen bg-cool-grey-50 shadow-md backdrop-blur-md">
-      <div className="mx-auto mt-5 flex h-fit max-w-[960px] flex-row justify-evenly align-middle font-raleway text-xl font-semibold text-cool-grey-800">
-        <a href="#">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+    <div
+      className={`fixed left-0 top-0 z-50 h-16 w-screen bg-cool-grey-50 shadow-md backdrop-blur-md transition-[top] ${show ? "top-0" : "-top-20"}`}
+    >
+      <div className="mx-auto mt-5 flex h-fit max-w-[960px] flex-row justify-evenly align-middle font-raleway text-xl font-semibold">
+        <a href="#" className={navbarLinkStyle}>
+          Home
+        </a>
+        <a href="#projects" className={navbarLinkStyle}>
+          Projects
+        </a>
+        <a href="#experience" className={navbarLinkStyle}>
+          Experience
+        </a>
+        <a href="#contact" className={navbarLinkStyle}>
+          Contact
+        </a>
       </div>
     </div>
   );
@@ -65,7 +104,7 @@ function Hero() {
           alt="Picture of Chase Peterson"
           width={1000}
           height={1000}
-          className={`${imageStyle} hover:translate-y-0 hover:cursor-default`}
+          className={`${imageStyle} rounded-full hover:translate-y-0 hover:cursor-default`}
         />
       </div>
       {/* Name & Text */}
