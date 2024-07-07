@@ -40,6 +40,9 @@ export default function Home() {
         <section id="projects" className="mt-4 space-y-24 pt-20">
           <MachineShopInterface />
         </section>
+        <section id="contact" className="mt-4 space-y-24 pt-20">
+          <Contact />
+        </section>
       </main>
       <Footer />
     </>
@@ -288,6 +291,67 @@ function MachineShopInterface() {
         </div>
       </motion.section>
     </PhotoProvider>
+  );
+}
+
+function Contact() {
+  const contactLinkStyle =
+    "text-xl sm:text-3xl font-semibold text-yellow-300 transition-colors hover:text-yellow-500";
+
+  return (
+    <motion.section
+      initial={{ y: -50, opacity: 0, scale: 0.8 }}
+      whileInView={{ y: 0, opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ ease: "easeOut" }}
+      className="mx-auto max-w-[960px]"
+    >
+      <h1 className={`${headingStyle} mb-4 text-center`}>Contact</h1>
+      {/* Grid */}
+      <div
+        className={`flex h-80 flex-col justify-center gap-y-8 overflow-hidden rounded-md bg-cool-grey-500 p-3 font-raleway shadow-inner-xl sm:p-5`}
+      >
+        <p className="mx-auto text-center font-raleway text-lg text-cool-grey-50 sm:text-2xl">
+          The fastest way to reach me is at my email
+          <br />
+          <a
+            className={contactLinkStyle}
+            href="mailto:chase@chasepeterson.dev"
+            target="_blank"
+          >
+            chase@chasepeterson.dev
+          </a>
+        </p>
+        <p className="mx-auto text-center font-raleway text-lg text-cool-grey-50 sm:text-2xl">
+          You can also find me on
+          <br />
+          <a
+            className={contactLinkStyle}
+            href="https://github.com/chase-of-the-fjords/"
+            target="_blank"
+          >
+            GitHub
+          </a>
+          {", "}
+          <a
+            className={contactLinkStyle}
+            href="https://www.linkedin.com/in/cepeterson/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+          {", and "}
+          <a
+            className={contactLinkStyle}
+            href="https://www.instagram.com/chase.of.the.fjords/"
+            target="_blank"
+          >
+            Instagram
+          </a>
+          .
+        </p>
+      </div>
+    </motion.section>
   );
 }
 
