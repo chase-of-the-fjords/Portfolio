@@ -80,7 +80,9 @@ function Hero() {
             {", with an emphasis on "}
             <b className="font-bold">front-end development and UI/UX design</b>.
           </p>
-          <p>Below you can find some of my projects and experience.</p>
+          <p>
+            Below you can find some of my <b>projects and experience</b>.
+          </p>
         </div>
       </div>
     </motion.section>
