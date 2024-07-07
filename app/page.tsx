@@ -319,11 +319,11 @@ function GameJams() {
           <div className="col-span-3 col-start-1 flex flex-col gap-2 sm:col-span-5 md:col-span-2 md:col-start-2 md:row-span-2 md:aspect-square md:gap-4">
             <div className={`${textBlockStyle} bg-purple-300`}>
               <p>
-                Since middle school, I've participated in many game jams, mostly
-                using a custom-built game engine made in <b>Java</b>. In these
-                game jams, I was required to design and develop my own game in{" "}
-                <b>48 hours</b>, testing my abilities to quickly work and adapt
-                as needed to reach the deadline.
+                Since middle school, {"I've"} participated in many game jams,
+                mostly using a custom-built game engine made in <b>Java</b>. In
+                these game jams, I was required to design and develop my own
+                game in <b>48 hours</b>, testing my abilities to quickly work
+                and adapt as needed to reach the deadline.
               </p>
               <p>
                 Some of my favorite are{" "}
