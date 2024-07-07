@@ -247,7 +247,7 @@ function MachineShopInterface() {
           <PhotoView src="/images/machineshop/shop.png">
             <Image
               src="/images/machineshop/shop.png"
-              alt="Picture of Chase Peterson"
+              alt="A picture of the machine shop interface"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
@@ -256,7 +256,7 @@ function MachineShopInterface() {
           <PhotoView src="/images/machineshop/saw.png">
             <Image
               src="/images/machineshop/saw.png"
-              alt="Picture of Chase Peterson"
+              alt="A picture of the machine shop interface with the saw selected"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
@@ -265,7 +265,7 @@ function MachineShopInterface() {
           <PhotoView src="/images/machineshop/moment.png">
             <Image
               src="/images/machineshop/moment.png"
-              alt="Picture of Chase Peterson"
+              alt="A picture of the moment shop interface for the machine shop"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
@@ -274,7 +274,7 @@ function MachineShopInterface() {
           <PhotoView src="/images/machineshop/history.png">
             <Image
               src="/images/machineshop/history.png"
-              alt="Picture of Chase Peterson"
+              alt="A picture of the machine shop history page"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
@@ -283,7 +283,7 @@ function MachineShopInterface() {
           <PhotoView src="/images/machineshop/historyfilter.png">
             <Image
               src="/images/machineshop/historyfilter.png"
-              alt="Picture of Chase Peterson"
+              alt="A picture of the machine shop history page, filtering for Brother C"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
@@ -380,7 +380,7 @@ function GameJams() {
           <PhotoView src="/images/jams/spellthief.png">
             <Image
               src="/images/jams/spellthief.png"
-              alt="Picture of Chase Peterson"
+              alt="A screenshot of Spellthief"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full md:row-start-1`}
@@ -389,7 +389,7 @@ function GameJams() {
           <PhotoView src="/images/jams/timeless.jpg">
             <Image
               src="/images/jams/timeless.jpg"
-              alt="Picture of Chase Peterson"
+              alt="A screenshot of Timeless"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
@@ -398,7 +398,7 @@ function GameJams() {
           <PhotoView src="/images/jams/matterathand.jpg">
             <Image
               src="/images/jams/matterathand.jpg"
-              alt="Picture of Chase Peterson"
+              alt="A screenshot of The Matter at Hand"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
@@ -407,7 +407,7 @@ function GameJams() {
           <PhotoView src="/images/jams/dimmer.jpg">
             <Image
               src="/images/jams/dimmer.jpg"
-              alt="Picture of Chase Peterson"
+              alt="A screenshot of Dimmer"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
@@ -416,7 +416,7 @@ function GameJams() {
           <PhotoView src="/images/jams/looparena.jpg">
             <Image
               src="/images/jams/looparena.jpg"
-              alt="Picture of Chase Peterson"
+              alt="A screenshot of Loop Arena"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
