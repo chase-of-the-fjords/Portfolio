@@ -41,6 +41,7 @@ export default function Home() {
           <MachineShopInterface />
         </section>
       </main>
+      <Footer />
     </>
   );
 }
@@ -287,5 +288,13 @@ function MachineShopInterface() {
         </div>
       </motion.section>
     </PhotoProvider>
+  );
+}
+
+function Footer() {
+  return (
+    <h5 className="mx-auto my-8 w-fit font-raleway text-lg font-medium">
+      © Chase Peterson {new Date().getFullYear()}
+    </h5>
   );
 }
