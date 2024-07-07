@@ -39,6 +39,7 @@ export default function Home() {
         <Hero />
         <section id="projects" className="mt-4 space-y-24 pt-20">
           <MachineShopInterface />
+          <GameJams />
         </section>
         <section id="contact" className="mt-4 space-y-24 pt-20">
           <Contact />
@@ -249,7 +250,7 @@ function MachineShopInterface() {
               alt="Picture of Chase Peterson"
               width={1000}
               height={1000}
-              className={`${imageStyle} col-span-1 row-span-1`}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
             />
           </PhotoView>
           <PhotoView src="/images/machineshop/saw.png">
@@ -258,7 +259,7 @@ function MachineShopInterface() {
               alt="Picture of Chase Peterson"
               width={1000}
               height={1000}
-              className={`${imageStyle} col-span-1 row-span-1`}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
             />
           </PhotoView>
           <PhotoView src="/images/machineshop/moment.png">
@@ -267,7 +268,7 @@ function MachineShopInterface() {
               alt="Picture of Chase Peterson"
               width={1000}
               height={1000}
-              className={imageStyle}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
             />
           </PhotoView>
           <PhotoView src="/images/machineshop/history.png">
@@ -276,7 +277,7 @@ function MachineShopInterface() {
               alt="Picture of Chase Peterson"
               width={1000}
               height={1000}
-              className={`${imageStyle} col-span-1 row-span-1`}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
             />
           </PhotoView>
           <PhotoView src="/images/machineshop/historyfilter.png">
@@ -285,7 +286,140 @@ function MachineShopInterface() {
               alt="Picture of Chase Peterson"
               width={1000}
               height={1000}
-              className={`${imageStyle} col-span-1 row-span-1`}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+        </div>
+      </motion.section>
+    </PhotoProvider>
+  );
+}
+
+function GameJams() {
+  return (
+    <PhotoProvider>
+      <motion.section
+        initial={{ y: -50, opacity: 0, scale: 0.8 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ ease: "easeOut" }}
+        className="mx-auto max-w-[960px]"
+      >
+        <h1 className={`md:grid md:grid-cols-3 ${headingStyle} mb-4 md:gap-9`}>
+          <a
+            href="http://chaseplays.itch.io"
+            className="text-purple-800 transition-colors hover:text-purple-950 md:col-span-2 md:col-start-2"
+            target="_blank"
+          >
+            Game Jams
+          </a>
+        </h1>
+        {/* Grid */}
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-5 md:grid-cols-3 md:gap-9">
+          <div className="col-span-3 col-start-1 flex flex-col gap-2 sm:col-span-5 md:col-span-2 md:col-start-2 md:row-span-2 md:aspect-square md:gap-4">
+            <div className={`${textBlockStyle} bg-purple-300`}>
+              <p>
+                Since middle school, {"I've"} participated in many game jams,
+                mostly using a custom-built game engine made in <b>Java</b>. In
+                these game jams, I was required to design and develop my own
+                game in <b>48 hours</b>, testing my abilities to quickly work
+                and adapt as needed to reach the deadline.
+              </p>
+              <p>
+                Some of my favorite are{" "}
+                <a
+                  href="http://chaseplays.itch.io/timeless"
+                  className={linkStyle}
+                  target="_blank"
+                >
+                  Timeless
+                </a>
+                ,{" "}
+                <a
+                  href="http://chaseplays.itch.io/dimmer"
+                  className={linkStyle}
+                  target="_blank"
+                >
+                  Dimmer
+                </a>
+                , and{" "}
+                <a
+                  href="http://chaseplays.itch.io/thematterathand"
+                  className={linkStyle}
+                  target="_blank"
+                >
+                  The Matter at Hand
+                </a>
+                . These, and all my other games, are available to play on my{" "}
+                <a
+                  href="http://chaseplays.itch.io"
+                  className={linkStyle}
+                  target="_blank"
+                >
+                  itch.io page
+                </a>
+                .
+              </p>
+              <p>
+                Using my experience from these game jams, I also led a team in
+                October 2023 to create a bullet hell game named{" "}
+                <a
+                  href="http://chaseplays.itch.io/spellthief"
+                  className={linkStyle}
+                  target="_blank"
+                >
+                  Spellthief
+                </a>{" "}
+                in 2 weeks for the TritonWare game jam at UCSD. This was made in{" "}
+                <b>Godot</b>, and I assisted with the programming, music,
+                design, and overall direction for the project.
+              </p>
+            </div>
+          </div>
+          {/* Pictures */}
+          <PhotoView src="/images/jams/spellthief.png">
+            <Image
+              src="/images/jams/spellthief.png"
+              alt="Picture of Chase Peterson"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full md:row-start-1`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/jams/timeless.jpg">
+            <Image
+              src="/images/jams/timeless.jpg"
+              alt="Picture of Chase Peterson"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/jams/matterathand.jpg">
+            <Image
+              src="/images/jams/matterathand.jpg"
+              alt="Picture of Chase Peterson"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/jams/dimmer.jpg">
+            <Image
+              src="/images/jams/dimmer.jpg"
+              alt="Picture of Chase Peterson"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/jams/looparena.jpg">
+            <Image
+              src="/images/jams/looparena.jpg"
+              alt="Picture of Chase Peterson"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
             />
           </PhotoView>
         </div>
