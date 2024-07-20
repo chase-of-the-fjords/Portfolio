@@ -39,6 +39,7 @@ export default function Home() {
         <Hero />
         <section id="projects" className="mt-4 space-y-24 pt-20">
           <MachineShopInterface />
+          <OrdersPage />
           <GameJams />
         </section>
         <section id="contact" className="mt-4 space-y-24 pt-20">
@@ -239,7 +240,7 @@ function MachineShopInterface() {
               <p>
                 This tool was primarily built with{" "}
                 <b>React (Next.js), JavaScript, and HTML/CSS</b>, with the
-                back-end built on <b>Node.js and SQL</b>.
+                back-end built on <b>Node.js and MySQL</b>.
               </p>
             </div>
           </div>
@@ -417,6 +418,118 @@ function GameJams() {
             <Image
               src="/images/jams/looparena.jpg"
               alt="A screenshot of Loop Arena"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+        </div>
+      </motion.section>
+    </PhotoProvider>
+  );
+}
+
+function OrdersPage() {
+  return (
+    <PhotoProvider>
+      <motion.section
+        initial={{ y: -50, opacity: 0, scale: 0.8 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ ease: "easeOut" }}
+        className="mx-auto max-w-[960px]"
+      >
+        <h1 className={`md:grid md:grid-cols-3 ${headingStyle} mb-4 md:gap-9`}>
+          <span className="md:col-span-2 md:col-start-2">
+            <a
+              href="http://admin.origingolf.com/orders"
+              className="text-blue-800 transition-colors hover:text-blue-950"
+              target="_blank"
+            >
+              Orders Page
+            </a>
+            {" ~ "}
+            Origin Golf
+          </span>
+        </h1>
+        {/* Grid */}
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-5 md:grid-cols-3 md:gap-9">
+          <div className="col-span-3 col-start-1 flex flex-col gap-2 sm:col-span-5 md:col-span-2 md:col-start-2 md:row-span-2 md:aspect-square md:gap-4">
+            <div className={`${textBlockStyle} bg-blue-300`}>
+              <p>
+                At <b>Origin Golf</b>, I also developed a page to track the{" "}
+                <b>orders from clients</b>. Where the machine shop interface
+                tracked the individual machine programs being run on each part,
+                this page tracks the orders put in by companies, and the{" "}
+                <b>quantities ordered and delivered</b>.
+              </p>
+              <p>
+                Beyond the basic information, there's also a{" "}
+                <b>priority system</b> built in to organize orders by their
+                relative importance. Companies also have their own{" "}
+                <b>creation and edit forms</b> with a priority system. All
+                changes to orders are tracked and viewable on the{" "}
+                <a
+                  href="http://admin.origingolf.com/orders/history"
+                  className={linkStyle}
+                  target="_blank"
+                >
+                  order history page
+                </a>
+                .
+              </p>
+              <p>
+                Just like the machine shop interface, the orders page has{" "}
+                <b>responsive design</b> and looks clean on all devices.
+              </p>
+              <p>
+                This tool was primarily built with{" "}
+                <b>React (Next.js), TypeScript, and HTML/CSS</b>, with the
+                back-end built on <b>Node.js and MySQL</b>.
+              </p>
+            </div>
+          </div>
+          {/* Pictures */}
+          <PhotoView src="/images/orders/orders.png">
+            <Image
+              src="/images/orders/orders.png"
+              alt="A screenshot of the orders page."
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full md:row-start-1`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/orders/edit.png">
+            <Image
+              src="/images/orders/edit.png"
+              alt="A screenshot of the orders page in edit mode."
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/orders/editorder.png">
+            <Image
+              src="/images/orders/editorder.png"
+              alt="A screenshot of an order being edited on the orders page."
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/orders/createcompany.png">
+            <Image
+              src="/images/orders/createcompany.png"
+              alt="A screenshot of a company being created on the orders page."
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/orders/history.png">
+            <Image
+              src="/images/orders/history.png"
+              alt="A screenshot of the history page for the orders page."
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
