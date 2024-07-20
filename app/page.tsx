@@ -464,7 +464,7 @@ function OrdersPage() {
                 <b>quantities ordered and delivered</b>.
               </p>
               <p>
-                Beyond the basic information, there's also a{" "}
+                Beyond the basic information, {"there's"} also a{" "}
                 <b>priority system</b> built in to organize orders by their
                 relative importance. Companies also have their own{" "}
                 <b>creation and edit forms</b> with a priority system. All
