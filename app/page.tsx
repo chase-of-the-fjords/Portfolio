@@ -151,7 +151,7 @@ function Hero() {
       {/* Picture of Chase */}
       <div className="mx-auto w-fit">
         <Image
-          src="/images/fjordpic.jpg"
+          src="/images/linkedinpfp.jpg"
           alt="Picture of Chase Peterson"
           width={1000}
           height={1000}
