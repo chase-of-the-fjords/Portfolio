@@ -20,7 +20,7 @@ const textBlockStyle =
   "flex flex-grow flex-col justify-center space-y-2 lg:space-y-4 overflow-hidden rounded-md bg-gradient-to-br bg-fixed p-5 font-raleway text-lg lg:text-xl leading-6 lg:leading-8 shadow-inner-xl";
 
 const headingStyle =
-  "font-source-serif text-2xl sm:text-3xl font-medium tracking-tight";
+  "font-segoe-ui text-2xl sm:text-3xl font-medium tracking-tight";
 
 const imageStyle =
   "aspect-square h-fit overflow-hidden rounded-md bg-blue-300 shadow-xl hover:cursor-pointer hover:-translate-y-1 transition-transform size-fit object-cover";
@@ -42,6 +42,7 @@ export default function Home() {
         <section id="experience" className="mt-4 space-y-24 pt-20">
           <MachineShopInterface />
           <OrdersPage />
+          <VGDC />
           <GameJams />
         </section>
         <section id="contact" className="mt-4 space-y-24 pt-20">
@@ -537,6 +538,103 @@ function OrdersPage() {
             <Image
               src="/images/orders/history.png"
               alt="A screenshot of the history page for the orders page."
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+        </div>
+      </motion.section>
+    </PhotoProvider>
+  );
+}
+
+function VGDC() {
+  return (
+    <PhotoProvider>
+      <motion.section
+        initial={{ y: -50, opacity: 0, scale: 0.8 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ ease: "easeOut" }}
+        className="mx-auto max-w-[960px]"
+      >
+        <h1 className={`${headingStyle} mb-4`}>
+          Technology Director ~ VGDC @ UC San Diego
+        </h1>
+        {/* Grid */}
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-5 md:grid-cols-3 md:gap-9">
+          <div className="col-span-3 col-start-1 flex flex-col gap-2 sm:col-span-5 md:col-span-2 md:col-start-1 md:row-span-2 md:aspect-square md:gap-4">
+            <div className={`${textBlockStyle} bg-green-400`}>
+              <p>
+                I currently serve as the <b>technology director</b> and{" "}
+                <b>treasurer</b> for the{" "}
+                <b>Video Game Development Club (VGDC)</b> at UC San Diego.
+              </p>
+              <p>
+                As technology director, I built a{" "}
+                <a
+                  href="https://github.com/vgdc-ucsd/VGDC-Website"
+                  className={linkStyle}
+                  target="_blank"
+                >
+                  new website
+                </a>{" "}
+                from the ground up using <b>Next.js</b>, similar to the above
+                tools, with a design built in <b>Figma</b>. I'm also responsible
+                for adding new games to our <b>arcade machine</b>, and helping
+                with other technology issues that arise.
+              </p>
+              <p>
+                As treasurer, I <b>overhauled the budgeting system</b> to
+                allocate our club's funds as VGDC <b>grew exponentially</b>{" "}
+                throughout the year. I also played a major role in planning and
+                preparing for events and workshops, and contribute as a
+                principal member of VGDC's executive team.
+              </p>
+            </div>
+          </div>
+          {/* Pictures */}
+          <PhotoView src="/images/vgdc/hero.png">
+            <Image
+              src="/images/vgdc/hero.png"
+              alt="A picture of the new VGDC website"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/vgdc/events.png">
+            <Image
+              src="/images/vgdc/events.png"
+              alt="A picture of events on the new VGDC website"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/vgdc/figma.jpg">
+            <Image
+              src="/images/vgdc/figma.jpg"
+              alt="A picture of the figma design of the VGDC website"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/vgdc/grouppic.jpg">
+            <Image
+              src="/images/vgdc/grouppic.jpg"
+              alt="A normal picture from VGDC's Halloween Social"
+              width={1000}
+              height={1000}
+              className={`${imageStyle} col-span-1 row-span-1 w-full`}
+            />
+          </PhotoView>
+          <PhotoView src="/images/vgdc/swordfight.jpg">
+            <Image
+              src="/images/vgdc/swordfight.jpg"
+              alt="A fun picture from VGDC's Halloween Social"
               width={1000}
               height={1000}
               className={`${imageStyle} col-span-1 row-span-1 w-full`}
