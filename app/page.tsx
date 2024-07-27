@@ -581,16 +581,16 @@ function VGDC() {
                   new website
                 </a>{" "}
                 from the ground up using <b>Next.js</b>, similar to the above
-                tools, with a design built in <b>Figma</b>. I{"'"}m also
+                tools, with a design built in <b>Figma</b>. {"I'm"} also
                 responsible for adding new games to our <b>arcade machine</b>,
                 and helping with other technology issues that arise.
               </p>
               <p>
                 As treasurer, I <b>overhauled the budgeting system</b> to
-                allocate our club{"'"}s funds as VGDC <b>grew exponentially</b>{" "}
+                allocate our {"club's"} funds as VGDC <b>grew exponentially</b>{" "}
                 throughout the year. I also played a major role in planning and
                 preparing for events and workshops, and contribute as a
-                principal member of VGDC's executive team.
+                principal member of {"VGDC's"} executive team.
               </p>
             </div>
           </div>
