@@ -29,7 +29,9 @@ const linkStyle =
   "font-bold transition-colors text-blue-900 hover:text-purple-900";
 
 const navbarLinkStyle =
-  "text-cool-grey-700 hover:text-cool-grey-900 transition-colors";
+  "text-cool-grey-700 hover:text-cool-grey-900 transition-colors py-1 border border-cool-grey-50";
+
+const resumeLink = "/Chase Peterson Resume.pdf";
 
 export default function Home() {
   return (
@@ -37,7 +39,7 @@ export default function Home() {
       <Navbar />
       <main id="home" className="mx-4 my-32 md:my-40">
         <Hero />
-        <section id="projects" className="mt-4 space-y-24 pt-20">
+        <section id="experience" className="mt-4 space-y-24 pt-20">
           <MachineShopInterface />
           <OrdersPage />
           <GameJams />
@@ -81,18 +83,22 @@ function Navbar() {
     <div
       className={`fixed left-0 z-50 h-16 w-screen bg-cool-grey-50 shadow-md backdrop-blur-md transition-[top] ${show ? "top-0" : "-top-20"}`}
     >
-      <div className="mx-auto mt-5 hidden h-fit max-w-[960px] flex-row justify-evenly align-middle font-raleway text-xl font-semibold min-[450px]:flex">
+      <div className="relative mx-auto mt-4 hidden h-fit max-w-[800px] flex-row justify-evenly font-raleway text-xl font-semibold min-[450px]:flex">
         <a href="#" className={navbarLinkStyle}>
           Home
-        </a>
-        <a href="#projects" className={navbarLinkStyle}>
-          Projects
         </a>
         <a href="#experience" className={navbarLinkStyle}>
           Experience
         </a>
         <a href="#contact" className={navbarLinkStyle}>
           Contact
+        </a>
+        <a
+          href={resumeLink}
+          className="rounded-md border border-cool-grey-700 px-2 py-1 text-cool-grey-700 transition-colors hover:bg-cool-grey-700 hover:text-white"
+          download
+        >
+          Resume
         </a>
       </div>
       <div className="min-[450px]:hidden">
@@ -110,19 +116,20 @@ function Navbar() {
               </span>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="text-left font-raleway">
-              <DropdownMenuLabel>Navigation</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
                 <a href="#">Home</a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="#projects">Projects</a>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <a href="#experience">Experience</a>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <a href="#contact">Contact</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href={resumeLink} download>
+                  Resume
+                </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
