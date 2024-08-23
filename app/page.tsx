@@ -573,7 +573,11 @@ function VGDC() {
               </p>
               <p>
                 As technology director, I built a{" "}
-                <a href="vgdc.dev" className={linkStyle} target="_blank">
+                <a
+                  href="https://vgdc.dev"
+                  className={linkStyle}
+                  target="_blank"
+                >
                   new website
                 </a>{" "}
                 from the ground up using <b>Next.js</b>, similar to the above
