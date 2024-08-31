@@ -1,4 +1,4 @@
-## Chase Peterson Portfolio
+# Chase Peterson Portfolio
 
 A simple, custom portfolio page built for Chase Peterson to present the work and projects he's done.
 
